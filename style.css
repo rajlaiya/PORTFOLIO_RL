@@ -1085,7 +1085,6 @@ footer a:hover {
   header {
     flex-direction: row;
     align-items: center;
-    text-align: center;
     justify-content: space-evenly;
     position: sticky; top: 0;
   }
