@@ -64,7 +64,6 @@ body {
 header {
   padding: 30px 0; /* Adjusted padding */
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: fixed; /* Fixed header for better UX */
   top: 0;
@@ -73,6 +72,8 @@ header {
   background-color: rgba(28, 28, 28, 0.95);
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  justify-content: space-evenly;
+  position: sticky; top: 0;
 }
 .logo {
   font-size: 2vmax;
@@ -815,17 +816,18 @@ nav a:hover {
 .hobby-item {
   transition-delay: 0.1s;
   background-color: #333;
+  justify-content: space-evenly;
   color: #fff;
   padding: 15px 25px;
-  border-radius: 8px;
-  font-size: 1em;
+  border-radius: 12px;
+  font-size: 1vmax;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for smoother hover */
-  animation: zoomIn 0.8s ease-out forwards; /* Added zoom-in animation */
+  animation: zoomIn 0.7s ease-out forwards; /* Added zoom-in animation */
   opacity: 1; /* Set initial opacity to 1 for visibility */
   transform: scale(1); /* Reset initial transform */
 }
 .hobby-item:hover {
-  transform: scale(1.2); /* Added hover animation */
+  transform: scale(1.1); /* Added hover animation */
   box-shadow: 0 0px 12px cyan; /* Added shadow on hover */
 }
 /* --- Resume Section Styles --- */
@@ -1013,7 +1015,7 @@ footer a:hover {
   nav ul {
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   nav ul li {
     margin-left: 0;
@@ -1027,7 +1029,7 @@ footer a:hover {
     display: none; /* Initially hide dropdown on smaller screens */
     box-shadow: none;
     background-color: #444;
-    border-radius: 0;
+    border-radius: 18px;
     min-width: auto;
   }
   .sections:hover .dropdown-content {
@@ -1048,10 +1050,10 @@ footer a:hover {
     margin-left: 0;
   }
   .hero-content h1 {
-    font-size: 3em;
+    font-size: 1vmax;
   }
   .hero-content p {
-    font-size: 1.1em;
+    font-size: 2vmax;
   }
   .hero-buttons a {
     padding: 14px 28px;
@@ -1067,6 +1069,8 @@ footer a:hover {
   }
   #about p {
     text-align: left;
+    align-items: center;
+    justify-content: center;
   }
   .contact-form {
     text-align: center;
@@ -1079,12 +1083,14 @@ footer a:hover {
     padding: 20px;
   }
   header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
+    justify-content: space-evenly;
+    position: sticky; top: 0;
   }
   nav ul {
-    margin-top: 15px;
+    margin-top: 5%;
   }
   nav ul li {
     margin-bottom: 10px;
@@ -1097,10 +1103,10 @@ footer a:hover {
     height: 200px;
   }
   .hero-content h1 {
-    font-size: 2.5em;
+    font-size: 4vmax;
   }
   .hero-content p {
-    font-size: 1em;
+    font-size: 2vmax;
     animation: none; /* Disable typing animation on very small screens if needed */
     white-space: normal;
     overflow: visible;
@@ -1115,7 +1121,7 @@ footer a:hover {
     }
   }
   .hero-buttons a {
-    font-size: 0.9em;
+    font-size: 2vmax;
     padding: 10px 20px;
     margin-right: 5px;
     margin-bottom: 15px;
@@ -1131,63 +1137,72 @@ footer a:hover {
   #hobbies h2,
   #resume h2,
   #contact h2 {
-    font-size: 2.5em;
+    font-size: 3vmax;
   }
   .qualification-item h3 {
-    font-size: 1.4em;
+    font-size: 2vmax;
   }
   .experience-item h3 {
-    font-size: 1.4em;
+    font-size: 1vmax;
+    justify-content: center;
   }
   .service-item h3 {
-    font-size: 1.6em;
+    font-size: 1vmax;
   }
   .skill-item h3 {
-    font-size: 1.4em;
+    font-size: 2vmax;
   }
   .project-info h3 {
-    font-size: 1.6em;
+    font-size: 2vmax;
+
   }
   .mini-project-item h3 {
-    font-size: 1.4em;
+    font-size: 2vmax;
   }
   .learning-items {
-    gap: 20px;
+    gap: 25px;
+    justify-content: center;
   }
   .learning-item {
     padding: 10px 15px;
-    font-size: 0.9em;
+    font-size: 2vmax;
+    text-align: center;
   }
   .hobbies-list {
     gap: 15px;
   }
   .hobby-item {
-    padding: 10px 15px;
-    font-size: 0.9em;
+    padding: 15px 15px;
+    font-size: 2vmax;
   }
   .contact-info {
     text-align: center;
   }
   .contact-info h3 {
-    font-size: 1.4em;
+    font-size: 1vmax;
+    text-align: center;
   }
   .contact-info p {
-    font-size: 1em;
+    font-size: 1vmax;
   }
   .contact-form {
     padding: 0 10px;
   }
   .form-group label {
-    font-size: 1em;
+    font-size: 2vmax;
   }
   .form-group input[type="text"],
   .form-group input[type="email"],
   .form-group textarea {
     padding: 14px;
-    font-size: 0.9em;
+    font-size: 2vmax;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .submit-button {
-    font-size: 1em;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmax;
     padding: 12px 24px;
   }
 }
